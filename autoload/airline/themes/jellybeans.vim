@@ -1,5 +1,25 @@
+" =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+"
+" A collection of modified themes from the original vim thems repo
+" Copyright (C) <year>  <name of author>
+"
+" This program is free software: you can redistribute it and/or modify
+" it under the terms of the GNU General Public License as published by
+" the Free Software Foundation, either version 3 of the License, or
+" (at your option) any later version.
+"
+" This program is distributed in the hope that it will be useful,
+" but WITHOUT ANY WARRANTY; without even the implied warranty of
+" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+" GNU General Public License for more details.
+"
+" You should have received a copy of the GNU General Public License
+" along with this program.  If not, see <https://www.gnu.org/licenses/>.
+"
+" =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
 " Color palette
-let s:gui00 = "#151515"
+let s:gui00 = "#121212"
 let s:gui01 = "#262626"
 let s:gui02 = "#4f5b66"
 let s:gui03 = "#65737e"
@@ -44,14 +64,14 @@ let s:modified = { 'airline_c': [ '#ffb964', '', 215, '', '' ] }
 " Normal mode
 let s:N1 = [ s:gui07 , s:gui0D , s:cterm07 , s:cterm0D  ]
 let s:N2 = [ s:guiWhite , s:gui01 , s:ctermWhite , s:cterm01  ]
-let s:N3 = [ s:gui02 , s:gui00 , s:cterm02 , s:cterm00  ]
+let s:N3 = [ s:guiWhite , s:gui00 , s:cterm02 , s:cterm00  ]
 let g:airline#themes#jellybeans#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
 let g:airline#themes#jellybeans#palette.normal_modified = s:modified
 
 " Insert mode
 let s:I1 = [ s:guiWhite , s:gui0B , s:ctermWhite , s:cterm0B  ]
 let s:I2 = s:N2
-let s:I3 = [ s:guiWhite , s:gui01 , s:ctermWhite , s:cterm00  ]
+let s:I3 = [ s:guiWhite , s:gui00 , s:ctermWhite , s:cterm00  ]
 let g:airline#themes#jellybeans#palette.insert = airline#themes#generate_color_map(s:I1, s:I2, s:I3)
 let g:airline#themes#jellybeans#palette.insert_modified = s:modified
 
@@ -63,7 +83,7 @@ let g:airline#themes#jellybeans#palette.visual = airline#themes#generate_color_m
 let g:airline#themes#jellybeans#palette.visual_modified = s:modified
 
 " Replace mode
-let s:R1 = [ s:gui08 , s:gui01 , s:cterm08, s:cterm00 ]
+let s:R1 = [ s:guiWhite , s:gui09 , s:ctermWhite, s:cterm09 ]
 let s:R2 = s:N2
 let s:R3 = s:I3
 let g:airline#themes#jellybeans#palette.replace = airline#themes#generate_color_map(s:R1, s:R2, s:R3)
